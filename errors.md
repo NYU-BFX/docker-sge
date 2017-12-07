@@ -23,3 +23,37 @@ Unable to run job: warning: sgeadmin's job is not allowed to run in any queue
 Your job 2 ("STDIN") has been submitted
 Exiting.
 ```
+
+Check the available users
+
+```
+sgeadmin@2c2eac15dd6d:~$ cut -d: -f1 /etc/passwd
+root
+daemon
+bin
+sys
+sync
+games
+man
+lp
+mail
+news
+uucp
+proxy
+www-data
+backup
+list
+irc
+gnats
+nobody
+libuuid
+syslog
+sshd
+messagebus
+postfix
+munge
+colord
+hdfs
+mapred
+sgeadmin
+```
