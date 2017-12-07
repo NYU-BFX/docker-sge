@@ -6,9 +6,9 @@ Dockerfile to build a container with SGE installed.
 To build type:
 
 ```
-git clone git@github.com:gawbul/docker-sge.git
+git clone git@github.com:stevekm/docker-sge.git
 cd docker-sge
-docker build -t gawbul/docker-sge .
+docker build -t stevekm/docker-sge .
 ```
 
 To pull from the Docker Hub type:
@@ -21,6 +21,8 @@ To run the image in a container type:
 
 ```
 docker run -it --rm gawbul/docker-sge login -f sgeadmin
+
+docker run -it --rm stevekm/docker-sge login -f sgeadmin
 ```
 
 **You need the `login -f sgeadmin` as root isn't allowed to submit jobs**

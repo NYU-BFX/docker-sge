@@ -30,6 +30,12 @@ RUN echo "Package: gnome*\nPin: release *\nPin-Priority: -1" >> /etc/apt/prefere
 # turn off password requirement for sudo groups users
 RUN sed -i "s/^\%sudo\tALL=(ALL:ALL)\sALL/%sudo ALL=(ALL) NOPASSWD:ALL/" /etc/sudoers
 
+# make sure the network is working
+RUN echo "Checking Network"
+RUN ping -c 1 192.203.230.10  # Ping a London-based NASA root nameserver
+RUN ping 91.189.92.201 -c 1 # an Ubuntu server ?
+RUN ping 8.8.8.8 -c 1 # Google
+
 # install required software as per README.BUILD
 RUN apt-get update -y
 RUN apt-get upgrade -y
